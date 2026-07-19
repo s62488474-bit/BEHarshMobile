@@ -31,7 +31,7 @@ class DnsVpnService : VpnService() {
     private fun startVpn() {
         if (running) return
         running = true
-        notify()
+        showNotification()
         vpnInterface = Builder()
             .setSession("BEHarsh-DNS")
             .addAddress("10.0.0.2", 32)
@@ -175,7 +175,7 @@ class DnsVpnService : VpnService() {
         stopSelf()
     }
 
-    private fun notify() {
+    private fun showNotification() {
         val ch = "dns_vpn"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val nm = getSystemService(NotificationManager::class.java)

@@ -36,7 +36,7 @@ class EnforcementService : Service() {
         super.onCreate()
         repo = SettingsRepository(this)
         usm  = getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-        notify()
+        showNotification()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -157,7 +157,7 @@ class EnforcementService : Service() {
 
     // ── Notification ──────────────────────────────────────────────────────────
 
-    private fun notify() {
+    private fun showNotification() {
         val ch = "enforcement"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val nm = getSystemService(NotificationManager::class.java)

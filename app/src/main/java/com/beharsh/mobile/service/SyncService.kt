@@ -29,7 +29,7 @@ class SyncService : Service() {
     override fun onCreate() {
         super.onCreate()
         repo = SettingsRepository(this)
-        notify()
+        showNotification()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -77,7 +77,7 @@ class SyncService : Service() {
         }
     }
 
-    private fun notify() {
+    private fun showNotification() {
         val ch = "sync_svc"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val nm = getSystemService(NotificationManager::class.java)
