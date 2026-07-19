@@ -117,7 +117,9 @@ class MainActivity : ComponentActivity() {
             contentResolver,
             Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
         ) ?: return false
-        return enabledServices.contains("${packageName}/.service.BEHarshAccessibilityService")
+        val target = "${packageName}/${packageName}.service.BEHarshAccessibilityService"
+        return enabledServices.split(":")
+            .any { it.equals(target, ignoreCase = true) }
     }
 }
 
