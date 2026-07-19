@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.BEHarshMobile" parent="Theme.Material3.DayNight.NoActionBar">
+    <!--
+        Base: android:Theme.Material.Light.NoActionBar is always available
+        on API 26+ (our minSdk). Compose renders its own Material3 theming
+        on top — this XML theme only controls the window chrome.
+    -->
+    <style name="Theme.BEHarshMobile" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">#F4F6FA</item>
         <item name="android:navigationBarColor">#F4F6FA</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">#F4F6FA</item>
     </style>
 </resources>
