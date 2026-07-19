@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    BE HARSH — Adaptive Icon Foreground
+    Canvas  : 108dp × 108dp  (Android adaptive icon spec)
+    Safe zone: 72dp circle centered at (54, 54) — all art kept inside
+    Design  : Geometric focus-aperture ring (6 sharp blades) surrounding
+              a bold "BH" monogram. Aperture = discipline/focus metaphor.
+    Colors  : #2563EB (vibrant blue) for primary shapes
+              #FFFFFF (white) for the inner monogram cutout glow ring
+    Background is transparent — the ic_launcher_background color (#1E293B)
+    is supplied by the adaptive icon wrapper.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 1 — Outer aperture ring
+        A thick annulus: outer radius 34, inner radius 27, center (54,54)
+        Drawn as a filled donut using even-odd path rule.
+        ═══════════════════════════════════════════════
+    -->
+    <path
+        android:fillColor="#2563EB"
+        android:fillType="evenOdd"
+        android:pathData="
+            M54,20
+            A34,34 0 1,1 53.999,20
+            Z
+            M54,27
+            A27,27 0 1,0 54.001,27
+            Z" />
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 2 — Six aperture blade notches cut into the ring
+        Each blade is a thin sharp diamond rotated 60° apart.
+        They sit exactly on the ring band (radii 27–34) and
+        create the camera-aperture / focus-iris silhouette.
+        Blades at 0°, 60°, 120°, 180°, 240°, 300°
+        ═══════════════════════════════════════════════
+    -->
+
+    <!-- Blade 0° — top -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M54,20 L57,27 L54,29 L51,27 Z" />
+
+    <!-- Blade 60° — top-right -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M83.45,37 L77.5,41.5 L75.5,39 L79.5,33 Z" />
+
+    <!-- Blade 120° — bottom-right -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M83.45,71 L79.5,75 L75.5,69 L77.5,66.5 Z" />
+
+    <!-- Blade 180° — bottom -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M54,88 L51,81 L54,79 L57,81 Z" />
+
+    <!-- Blade 240° — bottom-left -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M24.55,71 L28.5,66.5 L30.5,69 L26.5,75 Z" />
+
+    <!-- Blade 300° — top-left -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="
+            M24.55,37 L26.5,33 L30.5,39 L28.5,41.5 Z" />
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 3 — Inner white glow ring
+        Thin white annulus: outer radius 26, inner radius 23
+        Creates a crisp separation between the aperture ring
+        and the monogram field — premium depth effect.
+        ═══════════════════════════════════════════════
+    -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.15"
+        android:fillType="evenOdd"
+        android:pathData="
+            M54,28
+            A26,26 0 1,1 53.999,28
+            Z
+            M54,31
+            A23,23 0 1,0 54.001,31
+            Z" />
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 4 — "B" letterform (left half of monogram)
+        Constructed from pure rectangles — no font dependency.
+        Bounding box: x=36–48, y=40–68  (28×28 units, centered left)
+
+        Structure:
+          • Vertical stem: 36–40 wide, 40–68 tall
+          • Top bowl cap:  40–48 wide, 40–44 tall
+          • Mid bowl cap:  40–48 wide, 52–56 tall
+          • Bot bowl cap:  40–48 wide, 64–68 tall
+          • Top bowl arc:  40–48 wide, 44–52 tall (right side)
+          • Bot bowl arc:  40–48 wide, 56–64 tall (right side)
+        ═══════════════════════════════════════════════
+    -->
+
+    <!-- B — vertical stem -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="36"
+        android:y="40"
+        android:width="4"
+        android:height="28" />
+
+    <!-- B — top horizontal bar -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="40"
+        android:y="40"
+        android:width="8"
+        android:height="3.5" />
+
+    <!-- B — mid horizontal bar -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="40"
+        android:y="52.25"
+        android:width="7"
+        android:height="3.5" />
+
+    <!-- B — bottom horizontal bar -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="40"
+        android:y="64.5"
+        android:width="8"
+        android:height="3.5" />
+
+    <!-- B — top bowl right vertical -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="47"
+        android:y="43.5"
+        android:width="3"
+        android:height="8.75" />
+
+    <!-- B — bottom bowl right vertical (slightly wider = classic B proportion) -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="47.5"
+        android:y="55.75"
+        android:width="3.5"
+        android:height="8.75" />
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 5 — "H" letterform (right half of monogram)
+        Bounding box: x=52–68, y=40–68
+
+        Structure:
+          • Left stem:  52–56 wide, 40–68 tall
+          • Right stem: 64–68 wide, 40–68 tall
+          • Crossbar:   56–64 wide, 52–56 tall
+        ═══════════════════════════════════════════════
+    -->
+
+    <!-- H — left stem -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="52"
+        android:y="40"
+        android:width="4"
+        android:height="28" />
+
+    <!-- H — right stem -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="64"
+        android:y="40"
+        android:width="4"
+        android:height="28" />
+
+    <!-- H — crossbar -->
+    <rect
+        android:fillColor="#FFFFFF"
+        android:x="56"
+        android:y="52"
+        android:width="8"
+        android:height="4" />
+
+    <!--
+        ═══════════════════════════════════════════════
+        LAYER 6 — Blue accent dot (bottom-right corner badge)
+        A small filled circle at (78, 78) radius 5.
+        Acts as a premium "active" indicator — matches
+        the accent color used throughout the app UI.
+        ═══════════════════════════════════════════════
+    -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="
+            M78,73
+            A5,5 0 1,1 77.999,73
+            Z" />
+
+    <!-- Accent dot inner highlight -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.4"
+        android:pathData="
+            M78,75.5
+            A2.5,2.5 0 1,1 77.999,75.5
+            Z" />
+
+</vector>

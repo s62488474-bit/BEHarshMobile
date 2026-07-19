@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BE Harsh</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_modes">Modes</string>
+    <string name="tab_analytics">Analytics</string>
+    <string name="tab_sync">Sync</string>
+</resources>

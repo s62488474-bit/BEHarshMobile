@@ -1,0 +1,19 @@
+# Built outputs
+build/
+app/build/
+*.apk
+*.aab
+*.aar
+
+# Gradle cache
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+
+# Local SDK / IDE config
+local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Kotlin incremental build
+**/*.kotlin_module

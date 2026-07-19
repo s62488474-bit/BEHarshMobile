@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="canvas">#F4F6FA</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text_primary">#1E293B</color>
+    <color name="accent">#2563EB</color>
+    <color name="black">#000000</color>
+
+    <!-- Adaptive icon background — deep slate, premium feel -->
+    <color name="ic_launcher_background">#1E293B</color>
+</resources>
