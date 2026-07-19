@@ -7,7 +7,6 @@ app/build/
 
 # Gradle cache
 .gradle/
-gradle/wrapper/gradle-wrapper.jar
 
 # Local SDK / IDE config
 local.properties
