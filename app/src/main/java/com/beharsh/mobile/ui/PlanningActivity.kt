@@ -196,7 +196,7 @@ private fun PlanningScreen(repo: SettingsRepository, onDone: () -> Unit) {
                 colors = ButtonDefaults.buttonColors(containerColor = Accent),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(Icons.Default.CalendarMonth, null, modifier = Modifier.size(18.dp))
+                Icon(Icons.Default.CalendarToday, null, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(8.dp))
                 Text("Done — Schedule Tomorrow", color = Color.White, fontWeight = FontWeight.Bold)
             }
