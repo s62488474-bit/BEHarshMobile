@@ -5,4 +5,5 @@
     <string name="tab_modes">Modes</string>
     <string name="tab_analytics">Analytics</string>
     <string name="tab_sync">Sync</string>
+    <string name="accessibility_service_description">Enforces app restrictions and blocks distracting content.</string>
 </resources>
