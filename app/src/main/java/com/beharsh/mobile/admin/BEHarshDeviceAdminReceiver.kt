@@ -32,7 +32,7 @@ class BEHarshDeviceAdminReceiver : DeviceAdminReceiver() {
             val admin = component(context)
             if (!dpm.isDeviceOwnerApp(context.packageName)) return
             dpm.setUninstallBlocked(admin, context.packageName, true)
-            dpm.addUserRestriction(admin, UserManager.DISALLOW_CONFIG_SETTINGS)
+            dpm.addUserRestriction(admin, UserManager.DISALLOW_SAFE_BOOT)
             dpm.addUserRestriction(admin, UserManager.DISALLOW_FACTORY_RESET)
         }
 
@@ -42,7 +42,7 @@ class BEHarshDeviceAdminReceiver : DeviceAdminReceiver() {
             val admin = component(context)
             if (!dpm.isDeviceOwnerApp(context.packageName)) return
             dpm.setUninstallBlocked(admin, context.packageName, false)
-            dpm.clearUserRestriction(admin, UserManager.DISALLOW_CONFIG_SETTINGS)
+            dpm.clearUserRestriction(admin, UserManager.DISALLOW_SAFE_BOOT)
             dpm.clearUserRestriction(admin, UserManager.DISALLOW_FACTORY_RESET)
         }
     }
